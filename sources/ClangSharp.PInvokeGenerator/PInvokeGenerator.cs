@@ -3149,7 +3149,7 @@ public sealed partial class PInvokeGenerator : IDisposable
 
                 if (result.typeName.Contains("::"))
                 {
-                    result.typeName = result.typeName.Split(new string[] { "::" }, StringSplitOptions.RemoveEmptyEntries).Last();
+                    result.typeName = result.typeName.Replace("::", ".");
                     result.typeName = GetRemappedName(result.typeName, cursor, tryRemapOperatorName: false, out _, skipUsing: true);
                 }
             }
