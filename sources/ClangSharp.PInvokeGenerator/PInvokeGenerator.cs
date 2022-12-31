@@ -1925,7 +1925,7 @@ public sealed partial class PInvokeGenerator : IDisposable
                 case CX_CXXAccessSpecifier.CX_CXXInvalidAccessSpecifier:
                 {
                     // Top level declarations will have an invalid access specifier
-                    accessSpecifier = AccessSpecifier.Public;
+                    accessSpecifier = AccessSpecifier.Internal;
                     break;
                 }
 
