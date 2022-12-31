@@ -492,13 +492,6 @@ public partial class PInvokeGenerator
 
         var cxxMethodDecl = functionDecl as CXXMethodDecl;
 
-        if (cxxMethodDecl is not null and CXXConstructorDecl)
-        {
-            var parent = cxxMethodDecl.Parent;
-            Debug.Assert(parent is not null);
-            name = GetRemappedCursorName(parent);
-        }
-
         var isManualImport = _config.WithManualImports.Contains(name);
 
         var className = name;

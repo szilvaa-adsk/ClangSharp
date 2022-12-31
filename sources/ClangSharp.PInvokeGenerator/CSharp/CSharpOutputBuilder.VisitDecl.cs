@@ -524,7 +524,7 @@ internal partial class CSharpOutputBuilder : IOutputBuilder
             }
         }
 
-        if (!desc.IsCxxConstructor && !desc.IsManualImport)
+        if (!desc.IsManualImport)
         {
             Write(desc.ReturnType);
             Write(' ');
