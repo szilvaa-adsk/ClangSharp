@@ -1219,7 +1219,7 @@ public partial class PInvokeGenerator
 
             _outputBuilder.BeginParameter(in desc);
 
-            if (parmVarDecl.HasDefaultArg && !handledDefaultArg)
+            if (parmVarDecl.HasDefaultArg && !handledDefaultArg && false)
             {
                 _outputBuilder.BeginParameterDefault();
 
