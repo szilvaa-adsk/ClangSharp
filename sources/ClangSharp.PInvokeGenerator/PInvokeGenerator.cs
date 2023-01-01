@@ -2614,6 +2614,10 @@ public sealed partial class PInvokeGenerator : IDisposable
                 remappedName += $"_e__{(recordDecl.IsUnion ? "Union" : "Struct")}";
             }
         }
+        else if (namedDecl is FunctionDecl funcDecl && funcDecl.IsOverloadedOperator)
+        {
+            remappedName = funcDecl.Name.Replace("=", "_assignment");
+        }
 
         return remappedName;
     }

@@ -13,5 +13,10 @@
       "commandName": "Project",
       "commandLineArgs": "\"@$(MSBuildProjectDirectory)/Properties/GenerateLLVM.rsp\" --file-directory \"$(LLVMIncludePath)\" --include-directory \"$(LLVMIncludePath)\" --libraryPath $(LibLLVMName)"
     },
+    "acdbmgd": {
+      "commandName": "Project",
+      "commandLineArgs": "@interopgen.rsp",
+      "workingDirectory": "E:\\git\\fabricmgd\\src\\"
+    }
   }
 }
