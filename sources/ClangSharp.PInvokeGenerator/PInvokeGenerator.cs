@@ -221,7 +221,7 @@ public sealed partial class PInvokeGenerator : IDisposable
             if (hasAnyContents)
             {
                 using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-                sw.NewLine = "\n";
+                sw.NewLine = "\r\n";
 
                 if (_config.OutputMode == PInvokeGeneratorOutputMode.CSharp)
                 {
@@ -338,7 +338,7 @@ public sealed partial class PInvokeGenerator : IDisposable
             }
 
             using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-            sw.NewLine = "\n";
+            sw.NewLine = "\r\n";
 
             if (_config.OutputMode == PInvokeGeneratorOutputMode.CSharp)
             {
@@ -370,7 +370,7 @@ public sealed partial class PInvokeGenerator : IDisposable
             }
 
             using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-            sw.NewLine = "\n";
+            sw.NewLine = "\r\n";
 
             if (config.HeaderText != string.Empty)
             {
@@ -448,7 +448,7 @@ public sealed partial class PInvokeGenerator : IDisposable
             }
 
             using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-            sw.NewLine = "\n";
+            sw.NewLine = "\r\n";
 
             if (config.HeaderText != string.Empty)
             {
@@ -527,7 +527,7 @@ public sealed partial class PInvokeGenerator : IDisposable
             }
 
             using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-            sw.NewLine = "\n";
+            sw.NewLine = "\r\n";
 
             if (config.HeaderText != string.Empty)
             {
@@ -595,7 +595,7 @@ public sealed partial class PInvokeGenerator : IDisposable
             }
 
             using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-            sw.NewLine = "\n";
+            sw.NewLine = "\r\n";
 
             if (config.HeaderText != string.Empty)
             {
@@ -681,7 +681,7 @@ public sealed partial class PInvokeGenerator : IDisposable
                 }
 
                 using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-                sw.NewLine = "\n";
+                sw.NewLine = "\r\n";
 
                 if (config.HeaderText != string.Empty)
                 {
@@ -1506,7 +1506,7 @@ public sealed partial class PInvokeGenerator : IDisposable
         }
 
         using var sw = new StreamWriter(stream, s_defaultStreamWriterEncoding, DefaultStreamWriterBufferSize, leaveStreamOpen);
-        sw.NewLine = "\n";
+        sw.NewLine = "\r\n";
 
         if (_config.GenerateMultipleFiles)
         {
